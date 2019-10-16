@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_margin="15dp"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:background="#f2f5df"
+              tools:context=".ui.Main2Activity">
+
+<TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Payment"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+    <Button
+            android:id="@+id/COD"
+            android:layout_width="match_parent"
+            android:layout_height="192dp"
+            android:background="@android:color/holo_green_light"
+            android:padding="5dp"
+            android:text="Cash on Delivery"
+            android:textSize="20sp"/>
+
+    <Button
+            android:id="@+id/Paytm"
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:background="@android:color/holo_blue_light"
+            android:padding="5dp"
+            android:text="Paytm"
+            android:textSize="20sp"/>
+
+    <Button
+            android:id="@+id/GPay"
+            android:layout_width="match_parent"
+            android:layout_height="157dp"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="5dp"
+            android:text="GPay"
+            android:textSize="20sp"/>
+</LinearLayout>

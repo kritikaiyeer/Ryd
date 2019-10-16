@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:map="http://schemas.android.com/apk/res-auto"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:id="@+id/map"
+          android:name="com.google.android.gms.maps.SupportMapFragment"
+          android:layout_width="match_parent"
+          android:layout_height="530dp"
+          tools:context=".ui.PassengerMapsActivity"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/driverInfo"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:id="@+id/driverProfile"
+                android:padding="20sp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="40sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drivername"
+                    android:paddingBottom="10sp"
+                    android:paddingTop="20sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/driverphone"
+                    android:paddingBottom="10sp"
+                    android:paddingTop="20sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:gravity="bottom"
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffa500"
+            android:fontFamily="casual"
+            android:text="Confirm Request"
+            android:textColor="#ffffff"
+            android:textAlignment="center"/>
+        <Button
+            android:gravity="bottom"
+            android:id="@+id/pay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffa500"
+            android:fontFamily="casual"
+            android:text="PAY"
+            android:textColor="#ffffff"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+</LinearLayout>

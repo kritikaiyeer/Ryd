@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment" android:name="com.example.login.ui.fragments.HomeFragment"
+              android:label="Home" tools:layout="@layout/fragment_home"/>
+    <fragment android:id="@+id/profileFragment" android:name="com.example.login.ui.fragments.ProfileFragment"
+              android:label="Profile" tools:layout="@layout/fragment_profile">
+        <action android:id="@+id/actionVerifyPhone"
+                app:destination="@id/verifyPhoneFragment"/>
+        <action android:id="@+id/actionUpdateEmail"
+                app:destination="@id/updateEmailFragment"/>
+        <action android:id="@+id/actionUpdatePassword"
+                app:destination="@id/updatePasswordFragment"/>
+    </fragment>
+    <fragment android:id="@+id/verifyPhoneFragment" android:name="com.example.login.ui.fragments.VerifyPhoneFragment"
+              android:label="Verify Phone" tools:layout="@layout/fragment_verify_phone">
+        <action android:id="@+id/actionPhoneVerified" app:destination="@id/profileFragment"/>
+    </fragment>
+    <fragment android:id="@+id/updateEmailFragment" android:name="com.example.login.ui.fragments.UpdateEmailFragment"
+              android:label="Upate Email" tools:layout="@layout/fragment_update_email">
+        <action android:id="@+id/actionEmailUpdated" app:destination="@id/profileFragment"/>
+    </fragment>
+    <fragment android:id="@+id/updatePasswordFragment"
+              android:name="com.example.login.ui.fragments.UpdatePasswordFragment"
+              android:label="fragment_update_password" tools:layout="@layout/fragment_update_password">
+        <action android:id="@+id/actionPasswordUpdated"
+                app:destination="@id/profileFragment"/>
+    </fragment>
+</navigation>
